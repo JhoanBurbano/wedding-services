@@ -2,8 +2,10 @@
   "name": "marry-me-services",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
+    "build": "npx tsc",
+    "start":"node build/index.js",
     "start:dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
