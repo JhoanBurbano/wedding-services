@@ -26,5 +26,5 @@ app.use('/', cleanBodyMiddleware, router_families)
 app.use(express.static('uploads'))
 
 app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+  return console.log(`Express is listening at ${port}`);
 });
