@@ -2,20 +2,20 @@ require('dotenv').config()
 
 export const environment = {
     AWS: {
-        BUCKET: process.env.AWS_BUCKET,
-        BUCKET_REGION: process.env.AWS_BUCKET_REGION,
-        PUBLIC_ACCESS_KEY: process.env.AWS_PUBLIC_ACCESS_KEY,
-        SECRET_KEY: process.env.AWS_SECRET_KEY,
+        BUCKET: process.env.NODE_AWS_BUCKET,
+        BUCKET_REGION: process.env.NODE_AWS_BUCKET_REGION,
+        PUBLIC_ACCESS_KEY: process.env.NODE_AWS_PUBLIC_ACCESS_KEY,
+        SECRET_KEY: process.env.NODE_AWS_SECRET_KEY,
         QR_PATH: 'images/qr-codes/'
     },
     CLIENT:{
-        WEB_APP_URL: process.env.CLIENT_WEB_APP_URL,
-        VIEW_INVITE: process.env.CLIENT_STATUS_INVITE
+        WEB_APP_URL: process.env.NODE_CLIENT_WEB_APP_URL,
+        VIEW_INVITE: process.env.NODE_CLIENT_STATUS_INVITE
     },
     MONGO: {
-        USER: process.env.MONGO_USER,
-        PASSWORD: process.env.MONGO_PASSWORD,
-        DATABASE: process.env.MONGO_DATABASE,
+        USER: process.env.NODE_MONGO_USER,
+        PASSWORD: process.env.NODE_MONGO_PASSWORD,
+        DATABASE: process.env.NODE_MONGO_DATABASE,
     }
 }
 
