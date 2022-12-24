@@ -5,7 +5,8 @@ import { environment } from "../config";
 
 export async function qrcodeGenerator(id: string) {
   try {
-    const qr = await qrcode.toDataURL(environment.CLIENT.WEB_APP_URL+id, {
+    console.log('environment.CLIENT.WEB_APP_URL', environment.CLIENT.WEB_APP_URL + id)
+    const qr = await qrcode.toDataURL(environment.CLIENT.WEB_APP_URL as string + environment.CLIENT.VIEW_INVITE as string + id, {
             width: 400,
             color: {
                 dark: 'F3B562',
