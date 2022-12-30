@@ -7,7 +7,9 @@ import { deleteFile } from "../s3";
 export async function createFamily(req: Request, res:Response) {
     try {
         const family = new Family({...req.body})
-        family.qrcode = await qrcodeGenerator(family._id.toString()) as string
+        if(family.family.length){
+            family.qrcode = await qrcodeGenerator(family._id.toString()) as string
+        }
         await family.save()
         res.json({message: 'family has been create'})
     } catch (error) {
